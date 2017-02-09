@@ -21,6 +21,10 @@ We should be able to accomplish this with a multi-series line chart, where each 
 
 The datasets for each part are in the data folder of this repo.
 
+[Country of Citizenship](/data/country_of_citizenship.csv)
+
+[International student enrolment (2007-2016)](/data/international_student_enrolment.csv)
+
 ### How do we build it?
 
 The map and chart can both be built using [D3.js](https://d3js.org/).
