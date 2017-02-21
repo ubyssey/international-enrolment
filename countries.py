@@ -15,6 +15,7 @@ countries = {}
 with open('data/country_of_citizenship.csv', 'rU') as csvfile:
 
     reader = csv.reader(csvfile)
+    next(reader)
 
     for row in reader:
 
@@ -24,14 +25,13 @@ with open('data/country_of_citizenship.csv', 'rU') as csvfile:
             country = {
                 'Code': code,
                 'Year': int(row[1]),
-                'Students': int(row[6]),
-                'Lat': float(row[4]),
-                'Lon': float(row[5])
+                'Students': int(row[6])
             }
 
             countries[code] = country
 
         except:
+            print row[0]
             pass
 
 with open('data/countries.json', 'w') as outfile:
