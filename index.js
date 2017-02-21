@@ -35,15 +35,3 @@ d3.json('data/countries.json',
 
   }
 );
-//
-// window.setInterval(function() {
-//   basic_choropleth.updateChoropleth({
-//     USA: colors(Math.random() * 10),
-//     RUS: colors(Math.random() * 100),
-//     AUS: { fillKey: 'authorHasTraveledTo' },
-//     BRA: colors(Math.random() * 50),
-//     CAN: colors(Math.random() * 50),
-//     ZAF: colors(Math.random() * 50),
-//     IND: colors(Math.random() * 50),
-//   });
-// }, 2000);
