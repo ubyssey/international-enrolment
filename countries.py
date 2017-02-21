@@ -10,7 +10,7 @@ for country in all_countries:
 
     codes[country['name']] = country['alpha3Code']
 
-countries = {}
+countries = []
 
 with open('data/country_of_citizenship.csv', 'rU') as csvfile:
 
@@ -28,7 +28,7 @@ with open('data/country_of_citizenship.csv', 'rU') as csvfile:
                 'Students': int(row[6])
             }
 
-            countries[code] = country
+            countries.append(country)
 
         except:
             print row[0]
