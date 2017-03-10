@@ -39,6 +39,19 @@ d3.json('data/countries.json',
 
 // Chart
 
+var facultyColors = {
+ 'enginnering': '#4f1c8b',
+ 'music': '#e1b952',
+ 'med': '#122544',
+ 'sauder': '#808080',
+ 'dentistry': '#9086ca',
+ 'science': '#304b9c',
+ 'arts': '#4f1c8b',
+ 'kin': '#61a025',
+ 'forestry': '#2c5509'
+ 'LFS': '#000000'
+};
+
 var svg = d3.select("#chart"),
     margin = {top: 20, right: 80, bottom: 30, left: 50},
     width = svg.attr("width") - margin.left - margin.right,
