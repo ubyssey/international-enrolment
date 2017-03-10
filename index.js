@@ -48,7 +48,7 @@ var facultyColors = {
  'science': '#304b9c',
  'arts': '#4f1c8b',
  'kin': '#61a025',
- 'forestry': '#2c5509'
+ 'forestry': '#2c5509',
  'LFS': '#000000'
 };
 
