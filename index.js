@@ -12,25 +12,23 @@ var worldMap = new Datamap({
   }
 });
 
-var colors = ['#ffffe5','#fff7bc','#fee391','#fec44f','#fe9929','#ec7014','#cc4c02','#993404','#662506'];
-
-var colorScale = d3.scale.linear().range(colors);
+var colorScale = d3.scale.linear().range([0.5, 1]);
 
 d3.json('data/countries.json',
   function(error, data) {
 
     var countries = {};
 
-    colorScale.domain(
-      data.map(function(c) { return c.Students; })
-    );
+    colorScale.domain([0, 185]);
 
     data.map(function(c) {
       countries[c.Code] = {
-        fillColor: colorScale(c.Students),
+        fillColor: 'rgba(150, 0, 0, ' + colorScale(c.Students) + ')',
         students: c.Students
       }
     });
+
+    console.log(countries);
 
     worldMap.updateChoropleth(countries);
 
