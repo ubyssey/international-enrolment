@@ -61,7 +61,7 @@ var facultyNames = {
 };
 
 var svg = d3.select("#chart"),
-    margin = {top: 20, right: 150, bottom: 30, left: 80},
+    margin = {top: 60, right: 150, bottom: 60, left: 80},
     width = svg.attr("width") - margin.left - margin.right,
     height = svg.attr("height") - margin.top - margin.bottom,
     g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -92,7 +92,13 @@ d3.json("data/faculties.json", function(error, faculties) {
   g.append("g")
       .attr("class", "axis axis--x")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.svg.axis().scale(x).orient('bottom').tickFormat(function(d) { return d; }));
+      .call(d3.svg.axis().scale(x).orient('bottom').tickFormat(function(d) { return d; }))
+      .append("text")
+        .attr("fill", "#000")
+        .attr("x", 0)
+        .attr("dx", "350px")
+        .text("Year")
+        .attr("dy", "50px");
 
   g.append("g")
       .attr("class", "axis axis--y")
@@ -103,7 +109,17 @@ d3.json("data/faculties.json", function(error, faculties) {
       .attr("text-anchor", "end")
       .attr("dy", "-50px")
       .attr("fill", "#000")
-      .text("Percentage international students, %");
+      .text("Percentage international students, %")
+      .attr("dx", "-110px");
+
+  svg.append("text")
+        .attr("y", 0)
+        .style("text-anchor", "middle")
+        .attr("x", 450)
+        .attr("y", 50)
+        .attr("dy", 10)
+        .text("International Enrolment Over The Past 10 Years");
+
 
   var faculty = g.selectAll(".faculty")
     .data(faculties)
@@ -126,9 +142,3 @@ d3.json("data/faculties.json", function(error, faculties) {
 
 
 });
-
-// function type(d, _, columns) {
-//   d.date = parseTime(d.date);
-//   for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
-//   return d;
-// }
