@@ -41,9 +41,11 @@ var facultyColors = {
  "ARTS": "#4f1c8b",
  "COMM": "#808080",
  "DENT": "#9086ca",
+ "EDUC": "#ADD8E6",
  "FRST": "#2c5509",
  "LFS": "#000000",
  "MEDI": "#122544",
+ "PHAR": "#3CB371",
  "SCIE": "#304b9c"
  //{"MUSC": "#e1b952"}  missing
  //{"KINS": "#61a025"} missing 
@@ -53,11 +55,13 @@ var facultyNames = {
   'APSC': 'Applied Science',
   'ARTS': 'Arts',
   'COMM': 'Commerce',
-  'DENT': 'Detistry',
+  'DENT': 'Dentistry',
+  'EDUC': 'Education',
   'FRST': 'Forestry',
-  'LFS': 'Land and Food System',
+  'LFS': 'Land and Food Systems',
   'MEDI': 'Medicine',
-  'SCIE': 'Science',
+  'PHAR': 'Pharmaceutical Sciences',
+  'SCIE': 'Science'
 };
 
 var svg = d3.select("#chart"),
