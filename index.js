@@ -45,7 +45,6 @@ var facultyColors = {
  "FRST": "#2c5509",
  "LFS": "#000000",
  "MEDI": "#122544",
- "PHAR": "#3CB371",
  "SCIE": "#304b9c"
  //{"MUSC": "#e1b952"}  missing
  //{"KINS": "#61a025"} missing 
@@ -60,7 +59,6 @@ var facultyNames = {
   'FRST': 'Forestry',
   'LFS': 'Land and Food Systems',
   'MEDI': 'Medicine',
-  'PHAR': 'Pharmaceutical Sciences',
   'SCIE': 'Science'
 };
 
